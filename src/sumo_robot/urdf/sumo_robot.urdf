@@ -141,7 +141,6 @@
       <robot_base_frame>base_footprint</robot_base_frame>
     </plugin>
   </gazebo>
-
   <!-- FRICCIÓN DE RUEDAS EN GAZEBO -->
  <gazebo reference="Rueda_Izquierda_Link">
     <mu1>2.0</mu1>
