@@ -1,0 +1,2 @@
+Invoking command in '/home/juampa/movil_s_f_ws/build/sumo_robot': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot
+Invoked command in '/home/juampa/movil_s_f_ws/build/sumo_robot' returned '1': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<robot name="sumo_robot">
+
+<!-- BASE FOOTPRINT — correccion de orientacion SolidWorks -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.081" rpy="1.5707963 0 0"/>
+  </joint>
+
+  <!-- BASE LINK -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-6.36909314599226E-05 -0.0393380161065333 -0.00901080851197102" rpy="0 0 0"/>
+      <mass value="0.249564590974204"/>
+      <inertia
+        ixx="0.00021155786866528"
+        ixy="2.31704117484132E-07"
+        ixz="5.65578091832376E-07"
+        iyy="0.000389150499118312"
+        iyz="-4.30947185972461E-05"
+        izz="0.000323221631169198"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/base_link.STL"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RUEDA IZQUIERDA -->
+  <link name="Rueda_Izquierda_Link">
+    <inertial>
+      <origin xyz="5.30294939179304E-07 0.00682018756331903 3.1516355939766E-06" rpy="0 0 0"/>
+      <mass value="0.00900114044055008"/>
+      <inertia
+        ixx="1.19029948922833E-06"
+        ixy="2.59836989622918E-12"
+        ixz="-2.88863350933591E-13"
+        iyy="2.17799134379515E-06"
+        iyz="8.29985476520411E-12"
+        izz="1.19029028327058E-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/Rueda_Izquierda_Link.STL"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/Rueda_Izquierda_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Rueda_Izquierda_joint" type="continuous">
+    <origin xyz="0.0357 -0.0578478593522747 0.0210034789748472"
+            rpy="1.5707963267949 1.5707963267949 0"/>
+    <parent link="base_link"/>
+    <child link="Rueda_Izquierda_Link"/>
+    <axis xyz="0 -1 0"/>
+    <limit effort="50" velocity="50"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- RUEDA DERECHA — RPY corregido -->
+  <link name="Rueda_Derecha_Link">
+    <inertial>
+      <origin xyz="-2.16771515439834E-06 0.00682018756331901 -2.34841023866693E-06" rpy="0 0 0"/>
+      <mass value="0.00900114044055008"/>
+      <inertia
+        ixx="1.19029647075324E-06"
+        ixy="-6.71483191368762E-12"
+        ixz="-4.33130514673031E-12"
+        iyy="2.17799134379515E-06"
+        iyz="-5.52721879528086E-12"
+        izz="1.19029330174566E-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/Rueda_Derecha_Link.STL"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/Rueda_Derecha_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Rueda_Derecha_joint" type="continuous">
+    <origin xyz="-0.0357 -0.0578478593522747 0.0210034789748472"
+            rpy="1.5707963267949 -1.5707963267949 0"/>
+    <parent link="base_link"/>
+    <child link="Rueda_Derecha_Link"/>
+    <axis xyz="0 -1 0"/>
+    <limit effort="50" velocity="50"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+<!-- PLUGIN GAZEBO DIFF DRIVE -->
+  <gazebo>
+    <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/sumo</namespace>
+        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <left_joint>Rueda_Derecha_joint</left_joint>
+      <right_joint>Rueda_Izquierda_joint</right_joint>
+      <wheel_separation>0.0714</wheel_separation>
+      <wheel_diameter>0.042</wheel_diameter>
+      <max_wheel_torque>50</max_wheel_torque>
+      <max_wheel_acceleration>20.0</max_wheel_acceleration>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+  <!-- FRICCIÓN DE RUEDAS EN GAZEBO -->
+ <gazebo reference="Rueda_Izquierda_Link">
+    <mu1>2.0</mu1>
+    <mu2>2.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+  <gazebo reference="Rueda_Derecha_Link">
+    <mu1>2.0</mu1>
+    <mu2>2.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+  
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="Rueda_Izquierda_Link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="Rueda_Derecha_Link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  
+</robot>

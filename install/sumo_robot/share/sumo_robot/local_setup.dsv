@@ -1,0 +1,2 @@
+source;share/sumo_robot/environment/ament_prefix_path.sh
+source;share/sumo_robot/environment/path.sh

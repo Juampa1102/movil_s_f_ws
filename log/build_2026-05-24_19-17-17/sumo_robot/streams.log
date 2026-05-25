@@ -1,0 +1,17 @@
+[0.018s] Invoking command in '/home/juampa/movil_s_f_ws/build/sumo_robot': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot
+[0.054s] [31mCMake Error at CMakeLists.txt:1 (make_minimum_required):
+[0.054s]   Unknown CMake command "make_minimum_required".
+[0.054s] 
+[0.055s] [0m
+[0.055s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.055s]   No cmake_minimum_required command is present.  A line of code such as
+[0.055s] 
+[0.055s]     cmake_minimum_required(VERSION 3.22)
+[0.055s] 
+[0.056s]   should be added at the top of the file.  The version specified may be lower
+[0.056s]   if you wish to support older CMake versions for this project.  For more
+[0.056s]   information run "cmake --help-policy CMP0000".
+[0.056s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.056s] [0m
+[0.056s] -- Configuring incomplete, errors occurred!
+[0.058s] Invoked command in '/home/juampa/movil_s_f_ws/build/sumo_robot' returned '1': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot

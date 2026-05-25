@@ -1,0 +1,21 @@
+[1.512s] Invoking command in '/home/juampa/movil_s_f_ws/src/robot_museum': PYTHONPATH=/home/juampa/movil_s_f_ws/build/robot_museum/prefix_override:/home/juampa/.platformio/penv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:${PYTHONPATH} /home/juampa/.platformio/penv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_museum build --build-base /home/juampa/movil_s_f_ws/build/robot_museum/build install --record /home/juampa/movil_s_f_ws/build/robot_museum/install.log --single-version-externally-managed install_data
+[2.050s] running egg_info
+[2.051s] writing ../../build/robot_museum/robot_museum.egg-info/PKG-INFO
+[2.051s] writing dependency_links to ../../build/robot_museum/robot_museum.egg-info/dependency_links.txt
+[2.052s] writing entry points to ../../build/robot_museum/robot_museum.egg-info/entry_points.txt
+[2.052s] writing requirements to ../../build/robot_museum/robot_museum.egg-info/requires.txt
+[2.052s] writing top-level names to ../../build/robot_museum/robot_museum.egg-info/top_level.txt
+[2.056s] reading manifest file '../../build/robot_museum/robot_museum.egg-info/SOURCES.txt'
+[2.059s] writing manifest file '../../build/robot_museum/robot_museum.egg-info/SOURCES.txt'
+[2.059s] running build
+[2.060s] running build_py
+[2.060s] running install
+[2.060s] running install_lib
+[2.063s] running install_data
+[2.064s] copying launch/teleop.launch.py -> /home/juampa/movil_s_f_ws/install/robot_museum/share/robot_museum/launch
+[2.064s] running install_egg_info
+[2.068s] removing '/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum-0.0.1-py3.10.egg-info' (and everything under it)
+[2.069s] Copying ../../build/robot_museum/robot_museum.egg-info to /home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum-0.0.1-py3.10.egg-info
+[2.072s] running install_scripts
+[2.112s] writing list of installed files to '/home/juampa/movil_s_f_ws/build/robot_museum/install.log'
+[2.197s] Invoked command in '/home/juampa/movil_s_f_ws/src/robot_museum' returned '0': PYTHONPATH=/home/juampa/movil_s_f_ws/build/robot_museum/prefix_override:/home/juampa/.platformio/penv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:${PYTHONPATH} /home/juampa/.platformio/penv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_museum build --build-base /home/juampa/movil_s_f_ws/build/robot_museum/build install --record /home/juampa/movil_s_f_ws/build/robot_museum/install.log --single-version-externally-managed install_data

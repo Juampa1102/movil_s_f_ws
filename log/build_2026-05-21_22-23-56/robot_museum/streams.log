@@ -1,0 +1,33 @@
+[0.807s] Invoking command in '/home/juampa/movil_s_f_ws/src/robot_museum': PYTHONPATH=/home/juampa/movil_s_f_ws/build/robot_museum/prefix_override:/home/juampa/.platformio/penv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:${PYTHONPATH} /home/juampa/.platformio/penv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_museum build --build-base /home/juampa/movil_s_f_ws/build/robot_museum/build install --record /home/juampa/movil_s_f_ws/build/robot_museum/install.log --single-version-externally-managed install_data
+[1.151s] running egg_info
+[1.151s] creating ../../build/robot_museum/robot_museum.egg-info
+[1.152s] writing ../../build/robot_museum/robot_museum.egg-info/PKG-INFO
+[1.152s] writing dependency_links to ../../build/robot_museum/robot_museum.egg-info/dependency_links.txt
+[1.153s] writing entry points to ../../build/robot_museum/robot_museum.egg-info/entry_points.txt
+[1.153s] writing requirements to ../../build/robot_museum/robot_museum.egg-info/requires.txt
+[1.153s] writing top-level names to ../../build/robot_museum/robot_museum.egg-info/top_level.txt
+[1.154s] writing manifest file '../../build/robot_museum/robot_museum.egg-info/SOURCES.txt'
+[1.156s] reading manifest file '../../build/robot_museum/robot_museum.egg-info/SOURCES.txt'
+[1.157s] writing manifest file '../../build/robot_museum/robot_museum.egg-info/SOURCES.txt'
+[1.157s] running build
+[1.158s] running build_py
+[1.158s] creating /home/juampa/movil_s_f_ws/build/robot_museum/build
+[1.158s] creating /home/juampa/movil_s_f_ws/build/robot_museum/build/lib
+[1.158s] creating /home/juampa/movil_s_f_ws/build/robot_museum/build/lib/robot_museum
+[1.159s] copying robot_museum/__init__.py -> /home/juampa/movil_s_f_ws/build/robot_museum/build/lib/robot_museum
+[1.159s] running install
+[1.159s] running install_lib
+[1.159s] creating /home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum
+[1.160s] copying /home/juampa/movil_s_f_ws/build/robot_museum/build/lib/robot_museum/__init__.py -> /home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum
+[1.160s] byte-compiling /home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum/__init__.py to __init__.cpython-310.pyc
+[1.160s] running install_data
+[1.160s] creating /home/juampa/movil_s_f_ws/install/robot_museum/share/ament_index
+[1.161s] creating /home/juampa/movil_s_f_ws/install/robot_museum/share/ament_index/resource_index
+[1.161s] creating /home/juampa/movil_s_f_ws/install/robot_museum/share/ament_index/resource_index/packages
+[1.161s] copying resource/robot_museum -> /home/juampa/movil_s_f_ws/install/robot_museum/share/ament_index/resource_index/packages
+[1.161s] copying package.xml -> /home/juampa/movil_s_f_ws/install/robot_museum/share/robot_museum
+[1.162s] running install_egg_info
+[1.164s] Copying ../../build/robot_museum/robot_museum.egg-info to /home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages/robot_museum-0.0.0-py3.10.egg-info
+[1.165s] running install_scripts
+[1.191s] writing list of installed files to '/home/juampa/movil_s_f_ws/build/robot_museum/install.log'
+[1.235s] Invoked command in '/home/juampa/movil_s_f_ws/src/robot_museum' returned '0': PYTHONPATH=/home/juampa/movil_s_f_ws/build/robot_museum/prefix_override:/home/juampa/.platformio/penv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:${PYTHONPATH} /home/juampa/.platformio/penv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_museum build --build-base /home/juampa/movil_s_f_ws/build/robot_museum/build install --record /home/juampa/movil_s_f_ws/build/robot_museum/install.log --single-version-externally-managed install_data

@@ -1,0 +1,52 @@
+[0.019s] Invoking command in '/home/juampa/movil_s_f_ws/build/sumo_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot
+[0.146s] -- The C compiler identification is GNU 11.4.0
+[0.269s] -- The CXX compiler identification is GNU 11.4.0
+[0.287s] -- Detecting C compiler ABI info
+[0.423s] -- Detecting C compiler ABI info - done
+[0.440s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.441s] -- Detecting C compile features
+[0.443s] -- Detecting C compile features - done
+[0.454s] -- Detecting CXX compiler ABI info
+[0.597s] -- Detecting CXX compiler ABI info - done
+[0.607s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.607s] -- Detecting CXX compile features
+[0.608s] -- Detecting CXX compile features - done
+[0.613s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.806s] -- Found Python3: /home/juampa/.platformio/penv/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.091s] -- Configuring done
+[1.096s] -- Generating done
+[1.099s] -- Build files have been written to: /home/juampa/movil_s_f_ws/build/sumo_robot
+[1.105s] Invoked command in '/home/juampa/movil_s_f_ws/build/sumo_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake /home/juampa/movil_s_f_ws/src/sumo_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/sumo_robot
+[1.109s] Invoking command in '/home/juampa/movil_s_f_ws/build/sumo_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/sumo_robot -- -j8 -l8
+[1.173s] Invoked command in '/home/juampa/movil_s_f_ws/build/sumo_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/sumo_robot -- -j8 -l8
+[1.189s] Invoking command in '/home/juampa/movil_s_f_ws/build/sumo_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/sumo_robot
+[1.200s] -- Install configuration: ""
+[1.200s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/urdf
+[1.201s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/urdf/sumo_robot.urdf
+[1.201s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/urdf/UDRF_sumo.final.SLDASM.csv
+[1.201s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes
+[1.201s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/base_link.STL
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/Rueda_Derecha_Link.STL
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/Rueda_Izquierda_Link.STL
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/gazebo.launch
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/sumo_gazebo.launch.py
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/display.launch
+[1.202s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/config
+[1.203s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/config/joint_names_UDRF_sumo.final.SLDASM.yaml
+[1.203s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/ament_index/resource_index/package_run_dependencies/sumo_robot
+[1.203s] -- Installing: /home/juampa/movil_s_f_ws/install/sumo_robot/share/ament_index/resource_index/parent_prefix_path/sumo_robot
+[1.203s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/environment/ament_prefix_path.sh
+[1.203s] -- Installing: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/environment/ament_prefix_path.dsv
+[1.203s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/environment/path.sh
+[1.203s] -- Installing: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/environment/path.dsv
+[1.203s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/local_setup.bash
+[1.204s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/local_setup.sh
+[1.204s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/local_setup.zsh
+[1.204s] -- Installing: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/local_setup.dsv
+[1.204s] -- Installing: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/package.dsv
+[1.204s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/ament_index/resource_index/packages/sumo_robot
+[1.204s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/cmake/sumo_robotConfig.cmake
+[1.204s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/cmake/sumo_robotConfig-version.cmake
+[1.205s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/package.xml
+[1.206s] Invoked command in '/home/juampa/movil_s_f_ws/build/sumo_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/sumo_robot
