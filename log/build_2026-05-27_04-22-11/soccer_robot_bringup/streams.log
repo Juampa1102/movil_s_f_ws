@@ -1,0 +1,45 @@
+[0.022s] Invoking command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake /home/juampa/movil_s_f_ws/src/soccer_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/soccer_robot_bringup
+[0.239s] -- The C compiler identification is GNU 11.4.0
+[0.399s] -- The CXX compiler identification is GNU 11.4.0
+[0.422s] -- Detecting C compiler ABI info
+[0.570s] -- Detecting C compiler ABI info - done
+[0.593s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.596s] -- Detecting C compile features
+[0.597s] -- Detecting C compile features - done
+[0.606s] -- Detecting CXX compiler ABI info
+[0.774s] -- Detecting CXX compiler ABI info - done
+[0.786s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.786s] -- Detecting CXX compile features
+[0.787s] -- Detecting CXX compile features - done
+[0.809s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.027s] -- Found Python3: /home/juampa/.platformio/penv/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.383s] -- Configuring done
+[1.391s] -- Generating done
+[1.396s] -- Build files have been written to: /home/juampa/movil_s_f_ws/build/soccer_robot_bringup
+[1.405s] Invoked command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake /home/juampa/movil_s_f_ws/src/soccer_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/soccer_robot_bringup
+[1.411s] Invoking command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/soccer_robot_bringup -- -j8 -l8
+[1.480s] Invoked command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/soccer_robot_bringup -- -j8 -l8
+[1.499s] Invoking command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/soccer_robot_bringup
+[1.511s] -- Install configuration: ""
+[1.511s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/launch
+[1.511s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/launch/soccer_odom.launch.py
+[1.512s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/config
+[1.512s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/config/soccer_odom.rviz
+[1.512s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/urdf
+[1.512s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/urdf/soccer_robot_odom.urdf
+[1.513s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/ament_index/resource_index/package_run_dependencies/soccer_robot_bringup
+[1.513s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/ament_index/resource_index/parent_prefix_path/soccer_robot_bringup
+[1.513s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/environment/ament_prefix_path.sh
+[1.513s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/environment/ament_prefix_path.dsv
+[1.514s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/environment/path.sh
+[1.514s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/environment/path.dsv
+[1.514s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/local_setup.bash
+[1.514s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/local_setup.sh
+[1.515s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/local_setup.zsh
+[1.515s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/local_setup.dsv
+[1.515s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/package.dsv
+[1.515s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/ament_index/resource_index/packages/soccer_robot_bringup
+[1.516s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/cmake/soccer_robot_bringupConfig.cmake
+[1.516s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/cmake/soccer_robot_bringupConfig-version.cmake
+[1.516s] -- Installing: /home/juampa/movil_s_f_ws/install/soccer_robot_bringup/share/soccer_robot_bringup/package.xml
+[1.519s] Invoked command in '/home/juampa/movil_s_f_ws/build/soccer_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/soccer_robot_bringup

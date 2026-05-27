@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!--
+  URDF mínimo del robot futbol para visualización de odometría en RViz2.
+  No contiene meshes STL ni plugins de Gazebo — solo la geometría
+  necesaria para que robot_state_publisher publique /tf correctamente.
+
+  Dimensiones tomadas del URDF de SolidWorks (futbol_robot.urdf):
+    wheel_separation = 0.093 m  (origen ruedader_joint x=0.0465, ruedaizq_joint x=-0.0465)
+    wheel_radius     = 0.021 m  (wheel_diameter=0.042 en el plugin diff_drive)
+    base z offset    = 0.081 m  (del joint base_footprint)
+-->
+<robot name="soccer_robot_odom">
+
+  <!-- ODOM frame — raíz del árbol de tf desde ROS -->
+  <link name="odom"/>
+
+  <!-- BASE FOOTPRINT — mismo que en el URDF original -->
+  <link name="base_footprint"/>
+
+  <!-- La transformación odom → base_footprint la publica el ESP32 via micro-ROS -->
+  <!-- robot_state_publisher publica base_footprint → base_link (fixed) -->
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.035" rpy="0 0 0"/>
+  </joint>
+
+  <!-- BASE LINK — caja simple representando el chasis -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.10 0.093 0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.8"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.10 0.093 0.045"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.31147"/>
+      <inertia ixx="0.000292" ixy="0" ixz="0"
+               iyy="0.00035947" iyz="0" izz="0.00053514"/>
+    </inertial>
+  </link>
+
+  <!-- RUEDA DERECHA — posición del URDF original: x=0.0465 -->
+  <link name="ruedader_Link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.012" radius="0.021"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="0.009"/>
+      <inertia ixx="1.19e-6" ixy="0" ixz="0"
+               iyy="1.19e-6" iyz="0" izz="2.18e-6"/>
+    </inertial>
+  </link>
+
+  <joint name="ruedader_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="ruedader_Link"/>
+    <!-- x=0.0465 del URDF original, z=-0.021 para que toque el piso -->
+    <origin xyz="0.0465 0 -0.021" rpy="1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- RUEDA IZQUIERDA — posición del URDF original: x=-0.0465 -->
+  <link name="ruedaizq_Link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.012" radius="0.021"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="0.009"/>
+      <inertia ixx="1.19e-6" ixy="0" ixz="0"
+               iyy="1.19e-6" iyz="0" izz="2.18e-6"/>
+    </inertial>
+  </link>
+
+  <joint name="ruedaizq_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="ruedaizq_Link"/>
+    <origin xyz="-0.0465 0 -0.021" rpy="1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- SERVO DERECHO — caja representativa -->
+  <link name="servoder_Link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.023 0.012 0.027"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="servoder_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="servoder_Link"/>
+    <origin xyz="0.028 0.035 0.010" rpy="0 0 0"/>
+  </joint>
+
+  <!-- SERVO IZQUIERDO — espejo -->
+  <link name="servoizq_Link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.023 0.012 0.027"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="servoizq_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="servoizq_Link"/>
+    <origin xyz="-0.028 0.035 0.010" rpy="0 0 0"/>
+  </joint>
+
+</robot>

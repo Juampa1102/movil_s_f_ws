@@ -1,0 +1,9 @@
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/uninstall.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/soccer_robot_bringup_uninstall.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/test.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/edit_cache.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/rebuild_cache.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/list_install_components.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/install.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/install/local.dir
+/home/juampa/movil_s_f_ws/build/soccer_robot_bringup/CMakeFiles/install/strip.dir

@@ -1,0 +1,4 @@
+source;share/soccer_robot_bringup/local_setup.bash
+source;share/soccer_robot_bringup/local_setup.dsv
+source;share/soccer_robot_bringup/local_setup.sh
+source;share/soccer_robot_bringup/local_setup.zsh
