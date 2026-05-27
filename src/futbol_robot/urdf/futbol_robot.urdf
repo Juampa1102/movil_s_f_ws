@@ -145,7 +145,7 @@
   </link>
 
   <joint name="servoder_joint" type="fixed">
-    <origin xyz="0.028374 0.093324 0.026131" rpy="-3.1416 -0.0020221 -1.5708"/>
+    <origin xyz="0.028374 0.093324 0.026131" rpy="-3.1416 -0.0020221 -1.7"/>
     <parent link="base_link"/>
     <child link="servoder_Link"/>
   </joint>
@@ -181,7 +181,7 @@
   </link>
 
   <joint name="servoizq_joint" type="fixed">
-    <origin xyz="-0.029099 0.092707 0.026132" rpy="-3.1416 -0.0020221 -1.5708"/>
+    <origin xyz="-0.029099 0.092707 0.026132" rpy="-3.1416 -0.0020221 0.75"/>
     <parent link="base_link"/>
     <child link="servoizq_Link"/>
   </joint>
@@ -252,3 +252,4 @@
   </gazebo>
 
 </robot>
+
