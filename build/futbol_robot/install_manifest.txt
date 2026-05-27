@@ -1,0 +1,26 @@
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/urdf/futbol urdf.csv
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/urdf/futbol_robot.urdf
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/base_link.STL
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/servoizq_Link.STL
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/ruedaizq_Link.STL
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/ruedader_Link.STL
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/servoder_Link.STL
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/gazebo.launch
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/futbol_gazebo.launch.py
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/display.launch
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/config/joint_names_futbol urdf.yaml
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/package_run_dependencies/futbol_robot
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/parent_prefix_path/futbol_robot
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/ament_prefix_path.sh
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/ament_prefix_path.dsv
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/path.sh
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/path.dsv
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.bash
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.sh
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.zsh
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.dsv
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/package.dsv
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/packages/futbol_robot
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/cmake/futbol_robotConfig.cmake
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/cmake/futbol_robotConfig-version.cmake
+/home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/package.xml

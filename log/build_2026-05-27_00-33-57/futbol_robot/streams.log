@@ -1,0 +1,8 @@
+[0.022s] Invoking command in '/home/juampa/movil_s_f_ws/build/futbol_robot': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/futbol_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/futbol_robot
+[0.056s] [31mCMake Error at CMakeLists.txt:12:
+[0.057s]   Parse error.  Expected a command name, got unquoted argument with text
+[0.057s]   "'''".
+[0.057s] 
+[0.057s] [0m
+[0.058s] -- Configuring incomplete, errors occurred!
+[0.359s] Invoked command in '/home/juampa/movil_s_f_ws/build/futbol_robot' returned '1': /usr/bin/cmake /home/juampa/movil_s_f_ws/src/futbol_robot -DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/futbol_robot

@@ -1,0 +1,4 @@
+source;share/futbol_robot/local_setup.bash
+source;share/futbol_robot/local_setup.dsv
+source;share/futbol_robot/local_setup.sh
+source;share/futbol_robot/local_setup.zsh

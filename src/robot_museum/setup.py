@@ -24,6 +24,8 @@ setup(
     description='Robot museum exhibition package',
     license='MIT',
     entry_points={
-        'console_scripts': [],
+        'console_scripts': [
+        	'futbol_controller = robot_museum.futbol_controller:main',
+        ],
     },
 )

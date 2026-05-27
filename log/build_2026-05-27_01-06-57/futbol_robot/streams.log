@@ -1,0 +1,35 @@
+[0.017s] Invoking command in '/home/juampa/movil_s_f_ws/build/futbol_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/futbol_robot -- -j8 -l8
+[0.083s] Invoked command in '/home/juampa/movil_s_f_ws/build/futbol_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --build /home/juampa/movil_s_f_ws/build/futbol_robot -- -j8 -l8
+[0.099s] Invoking command in '/home/juampa/movil_s_f_ws/build/futbol_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/futbol_robot
+[0.109s] -- Install configuration: ""
+[0.109s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/urdf
+[0.109s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/urdf/futbol urdf.csv
+[0.110s] -- Installing: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/urdf/futbol_robot.urdf
+[0.110s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes
+[0.110s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/base_link.STL
+[0.110s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/servoizq_Link.STL
+[0.110s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/ruedaizq_Link.STL
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/ruedader_Link.STL
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/meshes/servoder_Link.STL
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/gazebo.launch
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/futbol_gazebo.launch.py
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/launch/display.launch
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/config
+[0.111s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/config/joint_names_futbol urdf.yaml
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/package_run_dependencies/futbol_robot
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/parent_prefix_path/futbol_robot
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/ament_prefix_path.sh
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/ament_prefix_path.dsv
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/path.sh
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/environment/path.dsv
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.bash
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.sh
+[0.112s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.zsh
+[0.113s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/local_setup.dsv
+[0.113s] -- Installing: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/package.dsv
+[0.113s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/ament_index/resource_index/packages/futbol_robot
+[0.113s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/cmake/futbol_robotConfig.cmake
+[0.113s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/cmake/futbol_robotConfig-version.cmake
+[0.113s] -- Up-to-date: /home/juampa/movil_s_f_ws/install/futbol_robot/share/futbol_robot/package.xml
+[0.115s] Invoked command in '/home/juampa/movil_s_f_ws/build/futbol_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble /usr/bin/cmake --install /home/juampa/movil_s_f_ws/build/futbol_robot

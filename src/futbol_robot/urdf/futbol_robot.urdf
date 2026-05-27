@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<robot name="futbol_robot">
+
+  <!-- BASE FOOTPRINT — correccion de orientacion SolidWorks -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.081" rpy="0 0 1.5707963"/>
+  </joint>
+
+  <!-- BASE LINK -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.00022154 0.045716 0.037877" rpy="0 0 0"/>
+      <mass value="0.31147"/>
+      <inertia
+        ixx="0.000292"
+        ixy="-5.6539E-07"
+        ixz="2.3206E-07"
+        iyy="0.00035947"
+        iyz="2.634E-05"
+        izz="0.00053514"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/base_link.STL"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RUEDA DERECHA -->
+  <link name="ruedader_Link">
+    <inertial>
+      <origin xyz="5.3029E-07 3.9035E-05 -0.0039798" rpy="0 0 0"/>
+      <mass value="0.0090011"/>
+      <inertia
+        ixx="1.1903E-06"
+        ixy="2.8886E-13"
+        ixz="2.5984E-12"
+        iyy="1.1903E-06"
+        iyz="-8.2999E-12"
+        izz="2.178E-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/ruedader_Link.STL"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/ruedader_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="ruedader_joint" type="continuous">
+    <origin xyz="0.0465 0.0036812 0.013458" rpy="1.5708 0 1.5708"/>
+    <parent link="base_link"/>
+    <child link="ruedader_Link"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+  <!-- RUEDA IZQUIERDA -->
+  <link name="ruedaizq_Link">
+    <inertial>
+      <origin xyz="5.3029E-07 3.9035E-05 -0.0039798" rpy="0 0 0"/>
+      <mass value="0.0090011"/>
+      <inertia
+        ixx="1.1903E-06"
+        ixy="2.8886E-13"
+        ixz="2.5984E-12"
+        iyy="1.1903E-06"
+        iyz="-8.2999E-12"
+        izz="2.178E-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/ruedaizq_Link.STL"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/ruedaizq_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="ruedaizq_joint" type="continuous">
+    <origin xyz="-0.0465 0.0036812 0.013458" rpy="1.5708 0 -1.5708"/>
+    <parent link="base_link"/>
+    <child link="ruedaizq_Link"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+  <!-- SERVO DERECHO -->
+  <link name="servoder_Link">
+    <inertial>
+      <origin xyz="0.010446 0.0090603 0.011116" rpy="0 0 0"/>
+      <mass value="0.0062162"/>
+      <inertia
+        ixx="6.8909E-07"
+        ixy="-1.2721E-07"
+        ixz="-2.8733E-08"
+        iyy="7.2541E-07"
+        iyz="-2.4923E-08"
+        izz="3.4005E-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/servoder_Link.STL"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/servoder_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="servoder_joint" type="fixed">
+    <origin xyz="0.028374 0.093324 0.026131" rpy="-3.1416 -0.0020221 -1.5708"/>
+    <parent link="base_link"/>
+    <child link="servoder_Link"/>
+  </joint>
+
+  <!-- SERVO IZQUIERDO — espejo del derecho -->
+  <link name="servoizq_Link">
+    <inertial>
+      <origin xyz="0.010446 0.0090603 0.011116" rpy="0 0 0"/>
+      <mass value="0.0062162"/>
+      <inertia
+        ixx="6.8909E-07"
+        ixy="-1.2721E-07"
+        ixz="-2.8733E-08"
+        iyy="7.2541E-07"
+        iyz="-2.4923E-08"
+        izz="3.4005E-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/servoizq_Link.STL"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://futbol_robot/meshes/servoizq_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="servoizq_joint" type="fixed">
+    <origin xyz="-0.029099 0.092707 0.026132" rpy="-3.1416 -0.0020221 -1.5708"/>
+    <parent link="base_link"/>
+    <child link="servoizq_Link"/>
+  </joint>
+
+  <!-- PLUGIN GAZEBO DIFF DRIVE -->
+  <gazebo>
+    <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/futbol</namespace>
+        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <left_joint>ruedader_joint</left_joint>
+      <right_joint>ruedaizq_joint</right_joint>
+      <wheel_separation>0.093</wheel_separation>
+      <wheel_diameter>0.042</wheel_diameter>
+      <max_wheel_torque>50</max_wheel_torque>
+      <max_wheel_acceleration>20.0</max_wheel_acceleration>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+  <!-- MATERIALES GAZEBO -->
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="ruedader_Link">
+    <material>Gazebo/Black</material>
+    <mu1>2.0</mu1>
+    <mu2>2.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+  <gazebo reference="ruedaizq_Link">
+    <material>Gazebo/Black</material>
+    <mu1>2.0</mu1>
+    <mu2>2.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+  <gazebo reference="servoder_Link">
+    <selfCollide>false</selfCollide>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="servoizq_Link">
+    <selfCollide>false</selfCollide>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+    <!-- Plugin para publicar estados de joints -->
+  <gazebo>
+    <plugin name="gazebo_ros_joint_state_publisher" 
+            filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <namespace>/futbol</namespace>
+      </ros>
+      <update_rate>50</update_rate>
+      <joint_name>ruedader_joint</joint_name>
+      <joint_name>ruedaizq_joint</joint_name>
+      <joint_name>servoder_joint</joint_name>
+      <joint_name>servoizq_joint</joint_name>
+    </plugin>
+  </gazebo>
+
+</robot>
