@@ -74,7 +74,7 @@
 
 #define WIFI_SSID "juanpa"
 #define WIFI_PASS "juampa312"
-#define AGENT_IP  "127.0.0.1"
+#define AGENT_IP  "10.51.219.200"
 #define AGENT_PORT 8888
 
 
@@ -287,7 +287,7 @@ void setup() {
     // AFTER — remove the AGENT_IP macro and change the call to:
     set_microros_wifi_transports(
         (char*)WIFI_SSID, (char*)WIFI_PASS,
-        IPAddress(192, 168, 1, 11), AGENT_PORT
+        IPAddress(10,51,219,200), AGENT_PORT
     );
 
     delay(2000);
