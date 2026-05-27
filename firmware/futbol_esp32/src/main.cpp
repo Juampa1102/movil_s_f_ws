@@ -72,8 +72,8 @@
 // MICRO-ROS
 // ============================================================
 
-#define WIFI_SSID "RENGIFO.VARELA_5_Ghz"
-#define WIFI_PASS "BMWX3CH3"
+#define WIFI_SSID "juanpa"
+#define WIFI_PASS "juampa312"
 #define AGENT_IP  "192.168.1.11"
 #define AGENT_PORT 8888
 
