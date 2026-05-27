@@ -9,6 +9,7 @@ setup.py
 ../../build/robot_museum/robot_museum.egg-info/top_level.txt
 ../../build/robot_museum/robot_museum.egg-info/zip-safe
 config/joystick.yaml
+launch/futbol_teleop.launch.py
 launch/teleop.launch.py
 resource/robot_museum
 robot_museum/__init__.py

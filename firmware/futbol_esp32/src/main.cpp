@@ -74,7 +74,7 @@
 
 #define WIFI_SSID "juanpa"
 #define WIFI_PASS "juampa312"
-#define AGENT_IP  "192.168.1.11"
+#define AGENT_IP  "127.0.0.1"
 #define AGENT_PORT 8888
 
 
