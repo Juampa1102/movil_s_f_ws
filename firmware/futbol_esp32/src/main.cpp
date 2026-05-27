@@ -77,6 +77,11 @@
 #define AGENT_IP  "192.168.1.11"
 #define AGENT_PORT 8888
 
+
+#ifndef LED_BUILTIN
+#define LED_BUILTIN 2
+#endif
+
 // ============================================================
 // VARIABLES GLOBALES
 // ============================================================
@@ -273,16 +278,16 @@ void setup() {
     writeServo(CH_SERVO2, SERVO2_REPOSO);
 
     // Encoders
-    ESP32Encoder::useInternalWeakPullResistors = puseUp;
+    ESP32Encoder::useInternalWeakPullResistors = UP;
     encoderIzq.attachHalfQuad(36, 39);  // VP, VN
     encoderDer.attachHalfQuad(34, 35);
     encoderIzq.clearCount();
     encoderDer.clearCount();
 
-    // micro-ROS WiFi
+    // AFTER — remove the AGENT_IP macro and change the call to:
     set_microros_wifi_transports(
-        WIFI_SSID, WIFI_PASS,
-        AGENT_IP, AGENT_PORT
+        (char*)WIFI_SSID, (char*)WIFI_PASS,
+        IPAddress(192, 168, 1, 11), AGENT_PORT
     );
 
     delay(2000);
