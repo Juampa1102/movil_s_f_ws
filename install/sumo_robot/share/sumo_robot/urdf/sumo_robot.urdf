@@ -159,7 +159,7 @@
   </link>
 
   <joint name="vl53_centro_joint" type="fixed">
-    <origin xyz="0.067284 0.00056819 0.051217" rpy="1.7453 0 1.5708"/>
+    <origin xyz="0.067284 0.00056819 0.051217" rpy="1.7453 0 0"/>
     <parent link="base_link"/>
     <child link="vl53_centro"/>
   </joint>
@@ -197,7 +197,7 @@
   </link>
 
   <joint name="vl53_der_joint" type="fixed">
-    <origin xyz="0.062963 -0.029939 0.051217" rpy="1.7453 0 1.309"/>
+    <origin xyz="0.062963 -0.029939 0.051217" rpy="1.7453 0 -0.2618"/>
     <parent link="base_link"/>
     <child link="vl53_der"/>
   </joint>
@@ -235,7 +235,7 @@
   </link>
 
   <joint name="vl53_izq_joint" type="fixed">
-    <origin xyz="0.062889 0.030215 0.051217" rpy="1.7453 0 1.8326"/>
+    <origin xyz="0.062889 0.030215 0.051217" rpy="1.7453 0 0.2618"/>
     <parent link="base_link"/>
     <child link="vl53_izq"/>
   </joint>
@@ -247,7 +247,7 @@
     <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <ros>
         <namespace>/sumo</namespace>
-        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>cmd_vel:=cmd_vel_real</remapping>
         <remapping>odom:=odom</remapping>
       </ros>
       <left_joint>ruedader_joint</left_joint>
