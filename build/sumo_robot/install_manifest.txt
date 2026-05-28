@@ -1,8 +1,13 @@
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/urdf/sumo_robot.urdf
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/urdf/UDRF_sumo.final.SLDASM.csv
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/base_link.STL
+/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/ruedaizq_Link.STL
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/Rueda_Derecha_Link.STL
+/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/sensorizq_Link.STL
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/Rueda_Izquierda_Link.STL
+/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/sensorder_Link.STL
+/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/ruedader_Link.STL
+/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/meshes/sensorcentro_Link.STL
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/gazebo.launch
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/sumo_gazebo_only.launch.py
 /home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot/launch/display.launch

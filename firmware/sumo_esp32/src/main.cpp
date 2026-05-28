@@ -278,7 +278,7 @@ void setup() {
     // micro-ROS WiFi
     set_microros_wifi_transports(
         (char*)WIFI_SSID, (char*)WIFI_PASS,
-        IPAddress(10, 51, 219, 200), AGENT_PORT
+        IPAddress(10,51,219,200), AGENT_PORT
     );
 
     delay(2000);

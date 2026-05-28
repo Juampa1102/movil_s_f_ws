@@ -1,27 +1,31 @@
 <?xml version="1.0"?>
 <robot name="sumo_robot">
 
-<!-- BASE FOOTPRINT — correccion de orientacion SolidWorks -->
+  <!-- ============================================================
+       BASE FOOTPRINT — corrección de orientación SolidWorks
+       ============================================================ -->
   <link name="base_footprint"/>
 
   <joint name="base_footprint_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0 0 0.081" rpy="1.5707963 0 0"/>
+    <origin xyz="0 0 0.0075" rpy="0 0 0"/>
   </joint>
 
-  <!-- BASE LINK -->
+  <!-- ============================================================
+       BASE LINK — nuevo modelo con mounts de sensores
+       ============================================================ -->
   <link name="base_link">
     <inertial>
-      <origin xyz="-6.36909314599226E-05 -0.0393380161065333 -0.00901080851197102" rpy="0 0 0"/>
-      <mass value="0.249564590974204"/>
+      <origin xyz="0.0322998137049694 0.000216139452828127 0.024791515465409" rpy="0 0 0"/>
+      <mass value="0.229572965520933"/>
       <inertia
-        ixx="0.00021155786866528"
-        ixy="2.31704117484132E-07"
-        ixz="5.65578091832376E-07"
-        iyy="0.000389150499118312"
-        iyz="-4.30947185972461E-05"
-        izz="0.000323221631169198"/>
+        ixx="0.000305395289442272"
+        ixy="9.93524369662602E-07"
+        ixz="4.20540083841152E-05"
+        iyy="0.00019272349997224"
+        iyz="1.96163829765704E-08"
+        izz="0.000346086554359737"/>
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -40,23 +44,25 @@
     </collision>
   </link>
 
-  <!-- RUEDA IZQUIERDA -->
-  <link name="Rueda_Izquierda_Link">
+  <!-- ============================================================
+       RUEDA DERECHA
+       ============================================================ -->
+  <link name="ruedader_Link">
     <inertial>
-      <origin xyz="5.30294939179304E-07 0.00682018756331903 3.1516355939766E-06" rpy="0 0 0"/>
+      <origin xyz="5.30294939181039E-07 3.90347897761198E-05 -0.00397981243668097" rpy="0 0 0"/>
       <mass value="0.00900114044055008"/>
       <inertia
         ixx="1.19029948922833E-06"
-        ixy="2.59836989622918E-12"
-        ixz="-2.88863350933591E-13"
-        iyy="2.17799134379515E-06"
-        iyz="8.29985476520411E-12"
-        izz="1.19029028327058E-06"/>
+        ixy="2.88863350942646E-13"
+        ixz="2.5983698962267E-12"
+        iyy="1.19029028327058E-06"
+        iyz="-8.2998547652045E-12"
+        izz="2.17799134379515E-06"/>
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://sumo_robot/meshes/Rueda_Izquierda_Link.STL"/>
+        <mesh filename="package://sumo_robot/meshes/ruedader_Link.STL"/>
       </geometry>
       <material name="black">
         <color rgba="0.0 0.0 0.0 1"/>
@@ -65,38 +71,39 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://sumo_robot/meshes/Rueda_Izquierda_Link.STL"/>
+        <mesh filename="package://sumo_robot/meshes/ruedader_Link.STL"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="Rueda_Izquierda_joint" type="continuous">
-    <origin xyz="0.0357 -0.0578478593522747 0.0210034789748472"
-            rpy="1.5707963267949 1.5707963267949 0"/>
+  <joint name="ruedader_joint" type="continuous">
+    <origin xyz="0.0036812 -0.0465 0.013458" rpy="1.5708 0 0"/>
     <parent link="base_link"/>
-    <child link="Rueda_Izquierda_Link"/>
-    <axis xyz="0 -1 0"/>
+    <child link="ruedader_Link"/>
+    <axis xyz="0 0 -1"/>
     <limit effort="50" velocity="50"/>
     <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
-  <!-- RUEDA DERECHA — RPY corregido -->
-  <link name="Rueda_Derecha_Link">
+  <!-- ============================================================
+       RUEDA IZQUIERDA
+       ============================================================ -->
+  <link name="ruedaizq_Link">
     <inertial>
-      <origin xyz="-2.16771515439834E-06 0.00682018756331901 -2.34841023866693E-06" rpy="0 0 0"/>
+      <origin xyz="5.30294939179304E-07 3.90347897761233E-05 -0.00397981243668097" rpy="0 0 0"/>
       <mass value="0.00900114044055008"/>
       <inertia
-        ixx="1.19029647075324E-06"
-        ixy="-6.71483191368762E-12"
-        ixz="-4.33130514673031E-12"
-        iyy="2.17799134379515E-06"
-        iyz="-5.52721879528086E-12"
-        izz="1.19029330174566E-06"/>
+        ixx="1.19029948922832E-06"
+        ixy="2.88863351300157E-13"
+        ixz="2.59836989622679E-12"
+        iyy="1.19029028327058E-06"
+        iyz="-8.29985476519136E-12"
+        izz="2.17799134379515E-06"/>
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://sumo_robot/meshes/Rueda_Derecha_Link.STL"/>
+        <mesh filename="package://sumo_robot/meshes/ruedaizq_Link.STL"/>
       </geometry>
       <material name="black">
         <color rgba="0.0 0.0 0.0 1"/>
@@ -105,22 +112,137 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://sumo_robot/meshes/Rueda_Derecha_Link.STL"/>
+        <mesh filename="package://sumo_robot/meshes/ruedaizq_Link.STL"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="Rueda_Derecha_joint" type="continuous">
-    <origin xyz="-0.0357 -0.0578478593522747 0.0210034789748472"
-            rpy="1.5707963267949 -1.5707963267949 0"/>
+  <joint name="ruedaizq_joint" type="continuous">
+    <origin xyz="0.0036812 0.0465 0.013458" rpy="1.5708 0 3.1416"/>
     <parent link="base_link"/>
-    <child link="Rueda_Derecha_Link"/>
-    <axis xyz="0 -1 0"/>
+    <child link="ruedaizq_Link"/>
+    <axis xyz="0 0 -1"/>
     <limit effort="50" velocity="50"/>
     <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
-<!-- PLUGIN GAZEBO DIFF DRIVE -->
+  <!-- ============================================================
+       SENSOR CENTRO  →  frame_id: vl53_centro
+       ============================================================ -->
+  <link name="vl53_centro">
+    <inertial>
+      <origin xyz="6.12187504926611E-06 4.42183997750867E-11 -0.000187238454517416" rpy="0 0 0"/>
+      <mass value="1.65901982165976E-06"/>
+      <inertia
+        ixx="1.14371161666928E-12"
+        ixy="3.94375960501325E-18"
+        ixz="1.86470722892683E-15"
+        iyy="3.70756970225522E-12"
+        iyz="-3.79354671952524E-21"
+        izz="4.71394121149585E-12"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorcentro_Link.STL"/>
+      </geometry>
+      <material name="dark_gray">
+        <color rgba="0.231 0.231 0.231 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorcentro_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="vl53_centro_joint" type="fixed">
+    <origin xyz="0.067284 0.00056819 0.051217" rpy="1.7453 0 1.5708"/>
+    <parent link="base_link"/>
+    <child link="vl53_centro"/>
+  </joint>
+
+  <!-- ============================================================
+       SENSOR DERECHO  →  frame_id: vl53_der
+       ============================================================ -->
+  <link name="vl53_der">
+    <inertial>
+      <origin xyz="6.12186771427325E-06 4.2837573765997E-11 -0.000187238449454334" rpy="0 0 0"/>
+      <mass value="1.65901978024444E-06"/>
+      <inertia
+        ixx="1.14371157981122E-12"
+        ixy="3.95850414132292E-18"
+        ixz="1.86470863885285E-15"
+        iyy="3.70756967213499E-12"
+        iyz="-2.95115353657109E-21"
+        izz="4.71394114033574E-12"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorder_Link.STL"/>
+      </geometry>
+      <material name="dark_gray">
+        <color rgba="0.231 0.231 0.231 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorder_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="vl53_der_joint" type="fixed">
+    <origin xyz="0.062963 -0.029939 0.051217" rpy="1.7453 0 1.309"/>
+    <parent link="base_link"/>
+    <child link="vl53_der"/>
+  </joint>
+
+  <!-- ============================================================
+       SENSOR IZQUIERDO  →  frame_id: vl53_izq
+       ============================================================ -->
+  <link name="vl53_izq">
+    <inertial>
+      <origin xyz="6.12187990527147E-06 4.31333198325223E-11 -0.000187238449445723" rpy="0 0 0"/>
+      <mass value="1.65901978015762E-06"/>
+      <inertia
+        ixx="1.1437115797384E-12"
+        ixy="3.95852534260894E-18"
+        ixz="1.86470652643207E-15"
+        iyy="3.70756967241395E-12"
+        iyz="-2.98591173255353E-21"
+        izz="4.71394114055092E-12"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorizq_Link.STL"/>
+      </geometry>
+      <material name="dark_gray">
+        <color rgba="0.231 0.231 0.231 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://sumo_robot/meshes/sensorizq_Link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="vl53_izq_joint" type="fixed">
+    <origin xyz="0.062889 0.030215 0.051217" rpy="1.7453 0 1.8326"/>
+    <parent link="base_link"/>
+    <child link="vl53_izq"/>
+  </joint>
+
+  <!-- ============================================================
+       PLUGIN GAZEBO DIFF DRIVE
+       ============================================================ -->
   <gazebo>
     <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <ros>
@@ -128,9 +250,9 @@
         <remapping>cmd_vel:=cmd_vel</remapping>
         <remapping>odom:=odom</remapping>
       </ros>
-      <left_joint>Rueda_Derecha_joint</left_joint>
-      <right_joint>Rueda_Izquierda_joint</right_joint>
-      <wheel_separation>0.0714</wheel_separation>
+      <left_joint>ruedader_joint</left_joint>
+      <right_joint>ruedaizq_joint</right_joint>
+      <wheel_separation>0.0930</wheel_separation>
       <wheel_diameter>0.042</wheel_diameter>
       <max_wheel_torque>50</max_wheel_torque>
       <max_wheel_acceleration>20.0</max_wheel_acceleration>
@@ -141,30 +263,45 @@
       <robot_base_frame>base_footprint</robot_base_frame>
     </plugin>
   </gazebo>
-  <!-- FRICCIÓN DE RUEDAS EN GAZEBO -->
- <gazebo reference="Rueda_Izquierda_Link">
+
+  <!-- ============================================================
+       FRICCIÓN DE RUEDAS EN GAZEBO
+       ============================================================ -->
+  <gazebo reference="ruedaizq_Link">
     <mu1>2.0</mu1>
     <mu2>2.0</mu2>
     <kp>1000000.0</kp>
     <kd>1.0</kd>
     <minDepth>0.001</minDepth>
   </gazebo>
-  <gazebo reference="Rueda_Derecha_Link">
+  <gazebo reference="ruedader_Link">
     <mu1>2.0</mu1>
     <mu2>2.0</mu2>
     <kp>1000000.0</kp>
     <kd>1.0</kd>
     <minDepth>0.001</minDepth>
   </gazebo>
-  
+
+  <!-- ============================================================
+       MATERIALES GAZEBO
+       ============================================================ -->
   <gazebo reference="base_link">
     <material>Gazebo/White</material>
   </gazebo>
-  <gazebo reference="Rueda_Izquierda_Link">
+  <gazebo reference="ruedaizq_Link">
     <material>Gazebo/Black</material>
   </gazebo>
-  <gazebo reference="Rueda_Derecha_Link">
+  <gazebo reference="ruedader_Link">
     <material>Gazebo/Black</material>
   </gazebo>
-  
+  <gazebo reference="vl53_centro">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="vl53_der">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="vl53_izq">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
 </robot>
