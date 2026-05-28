@@ -1,0 +1,142 @@
+[0.000000] (-) TimerEvent: {}
+[0.000321] (-) JobUnselected: {'identifier': 'futbol_robot'}
+[0.000959] (-) JobUnselected: {'identifier': 'robot_museum'}
+[0.001042] (-) JobUnselected: {'identifier': 'sumo_robot'}
+[0.001131] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict()}
+[0.001205] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[0.023728] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[0.024600] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '/home/juampa/movil_s_f_ws/src/micro_ros_agent/micro_ros_agent', '-DCMAKE_INSTALL_PREFIX=/home/juampa/movil_s_f_ws/install/micro_ros_agent'], 'cwd': '/home/juampa/movil_s_f_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'juampa'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/juampa'), ('OLDPWD', '/home/juampa/movil_s_f_ws/firmware/sumo_esp32'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('MANAGERPID', '1426'), ('SYSTEMD_EXEC_PID', '1812'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5842'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install:/home/juampa/lab_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'juampa'), ('JOURNAL_STREAM', '8:14602'), ('_', '/home/juampa/.platformio/penv/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'juampa'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models::/home/juampa/movil_s_f_ws/install/sumo_robot/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/juampa/.platformio/penv/bin:/opt/ros/humble/bin:/home/juampa/.cargo/bin:/home/juampa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/juampa:@/tmp/.ICE-unix/1564,unix/juampa:/tmp/.ICE-unix/1564'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/juampa/fastdds_localhost.xml'), ('INVOCATION_ID', '17e4bd8dc2134e09bd84730864a097fa'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IC18P3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install/sumo_robot:/home/juampa/movil_s_f_ws/install/soccer_robot_bringup:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/movil_s_f_ws/install/futbol_robot:/home/juampa/lab_ws/install/urdf_tutorial:/home/juampa/lab_ws/install/robot3dof:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/home/juampa/lab_ws/install/basic_mobile_robot:/home/juampa/lab_ws/install/arduinobot_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:bfd4ff75-be3d-451b-9b84-756ec31d0ed8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11::/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/juampa/movil_s_f_ws/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:/home/juampa/lab_ws/install/robot1_gazebo/lib/python3.10/site-packages:/home/juampa/lab_ws/install/lab2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install/sumo_robot:/home/juampa/movil_s_f_ws/install/soccer_robot_bringup:/home/juampa/movil_s_f_ws/install/futbol_robot:/home/juampa/lab_ws/install/urdf_tutorial:/home/juampa/lab_ws/install/robot3dof:/home/juampa/lab_ws/install/basic_mobile_robot:/home/juampa/lab_ws/install/arduinobot_description:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble')]), 'shell': False}
+[0.098592] (-) TimerEvent: {}
+[0.185445] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.198738] (-) TimerEvent: {}
+[0.202120] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.298881] (-) TimerEvent: {}
+[0.350686] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.364549] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.365029] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.365819] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.399026] (-) TimerEvent: {}
+[0.481251] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.495411] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.499163] (-) TimerEvent: {}
+[0.599619] (-) TimerEvent: {}
+[0.667284] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.685698] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.686219] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.687251] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.699760] (-) TimerEvent: {}
+[0.784318] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.790525] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[0.792920] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/juampa/movil_s_f_ws/build/micro_ros_agent\n'}
+[0.799530] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[0.800704] (-) TimerEvent: {}
+[0.801386] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[0.804280] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/juampa/movil_s_f_ws/build/micro_ros_agent', '--', '-j8', '-l8'], 'cwd': '/home/juampa/movil_s_f_ws/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'juampa'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/juampa'), ('OLDPWD', '/home/juampa/movil_s_f_ws/firmware/sumo_esp32'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('MANAGERPID', '1426'), ('SYSTEMD_EXEC_PID', '1812'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5842'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install:/home/juampa/lab_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'juampa'), ('JOURNAL_STREAM', '8:14602'), ('_', '/home/juampa/.platformio/penv/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'juampa'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models::/home/juampa/movil_s_f_ws/install/sumo_robot/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/juampa/.platformio/penv/bin:/opt/ros/humble/bin:/home/juampa/.cargo/bin:/home/juampa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/juampa:@/tmp/.ICE-unix/1564,unix/juampa:/tmp/.ICE-unix/1564'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/juampa/fastdds_localhost.xml'), ('INVOCATION_ID', '17e4bd8dc2134e09bd84730864a097fa'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IC18P3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install/sumo_robot:/home/juampa/movil_s_f_ws/install/soccer_robot_bringup:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/movil_s_f_ws/install/futbol_robot:/home/juampa/lab_ws/install/urdf_tutorial:/home/juampa/lab_ws/install/robot3dof:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/home/juampa/lab_ws/install/basic_mobile_robot:/home/juampa/lab_ws/install/arduinobot_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:bfd4ff75-be3d-451b-9b84-756ec31d0ed8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11::/home/juampa/movil_s_f_ws/install/sumo_robot/share/sumo_robot'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/juampa/movil_s_f_ws/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/juampa/movil_s_f_ws/install/robot_museum/lib/python3.10/site-packages:/home/juampa/lab_ws/install/robot1_gazebo/lib/python3.10/site-packages:/home/juampa/lab_ws/install/lab2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/juampa/movil_s_f_ws/install/sumo_robot:/home/juampa/movil_s_f_ws/install/soccer_robot_bringup:/home/juampa/movil_s_f_ws/install/futbol_robot:/home/juampa/lab_ws/install/urdf_tutorial:/home/juampa/lab_ws/install/robot3dof:/home/juampa/lab_ws/install/basic_mobile_robot:/home/juampa/lab_ws/install/arduinobot_description:/home/juampa/movil_s_f_ws/install/robot_museum:/home/juampa/lab_ws/install/robot1_gazebo:/home/juampa/lab_ws/install/lab2:/opt/ros/humble')]), 'shell': False}
+[0.900869] (-) TimerEvent: {}
+[0.911164] (micro_ros_agent) StdoutLine: {'line': b"[  6%] \x1b[34m\x1b[1mCreating directories for 'xrceagent'\x1b[0m\n"}
+[1.001046] (-) TimerEvent: {}
+[1.083870] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mPerforming download step (git clone) for 'xrceagent'\x1b[0m\n"}
+[1.101183] (-) TimerEvent: {}
+[1.133349] (micro_ros_agent) StderrLine: {'line': b"Cloning into 'xrceagent'...\n"}
+[1.201337] (-) TimerEvent: {}
+[1.301794] (-) TimerEvent: {}
+[1.402248] (-) TimerEvent: {}
+[1.502684] (-) TimerEvent: {}
+[1.603146] (-) TimerEvent: {}
+[1.703599] (-) TimerEvent: {}
+[1.804055] (-) TimerEvent: {}
+[1.904525] (-) TimerEvent: {}
+[2.004950] (-) TimerEvent: {}
+[2.105455] (-) TimerEvent: {}
+[2.205874] (-) TimerEvent: {}
+[2.306366] (-) TimerEvent: {}
+[2.406778] (-) TimerEvent: {}
+[2.507306] (-) TimerEvent: {}
+[2.607796] (-) TimerEvent: {}
+[2.708247] (-) TimerEvent: {}
+[2.808691] (-) TimerEvent: {}
+[2.909153] (-) TimerEvent: {}
+[3.009603] (-) TimerEvent: {}
+[3.110126] (-) TimerEvent: {}
+[3.210598] (-) TimerEvent: {}
+[3.311056] (-) TimerEvent: {}
+[3.411540] (-) TimerEvent: {}
+[3.511982] (-) TimerEvent: {}
+[3.612464] (-) TimerEvent: {}
+[3.712952] (-) TimerEvent: {}
+[3.813458] (-) TimerEvent: {}
+[3.914373] (-) TimerEvent: {}
+[4.004691] (micro_ros_agent) StderrLine: {'line': b'HEAD is now at 155cfaa Release v3.0.1\n'}
+[4.014519] (-) TimerEvent: {}
+[4.114929] (-) TimerEvent: {}
+[4.127463] (micro_ros_agent) StdoutLine: {'line': b"[ 18%] \x1b[34m\x1b[1mPerforming update step for 'xrceagent'\x1b[0m\n"}
+[4.193324] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo patch step for 'xrceagent'\x1b[0m\n"}
+[4.215071] (-) TimerEvent: {}
+[4.247993] (micro_ros_agent) StdoutLine: {'line': b"[ 31%] \x1b[34m\x1b[1mPerforming configure step for 'xrceagent'\x1b[0m\n"}
+[4.266957] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/juampa/movil_s_f_ws/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake\n'}
+[4.315191] (-) TimerEvent: {}
+[4.383843] (micro_ros_agent) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.402664] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.415369] (-) TimerEvent: {}
+[4.515903] (-) TimerEvent: {}
+[4.565394] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.590188] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.590969] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.592128] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.616052] (-) TimerEvent: {}
+[4.716505] (-) TimerEvent: {}
+[4.720411] (micro_ros_agent) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.736537] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.816663] (-) TimerEvent: {}
+[4.917186] (-) TimerEvent: {}
+[4.932312] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.953020] (micro_ros_agent) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.953786] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.955319] (micro_ros_agent) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.976276] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[5.017332] (-) TimerEvent: {}
+[5.117812] (-) TimerEvent: {}
+[5.138411] (micro_ros_agent) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[5.138861] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.217980] (-) TimerEvent: {}
+[5.307021] (micro_ros_agent) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[5.308680] (micro_ros_agent) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.318197] (-) TimerEvent: {}
+[5.335870] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.340471] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[5.341801] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/juampa/movil_s_f_ws/build/micro_ros_agent/agent/src/xrceagent-build\n'}
+[5.389008] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mPerforming build step for 'xrceagent'\x1b[0m\n"}
+[5.418331] (-) TimerEvent: {}
+[5.486751] (micro_ros_agent) StdoutLine: {'line': b"[ 12%] \x1b[34m\x1b[1mCreating directories for 'uagent'\x1b[0m\n"}
+[5.518524] (-) TimerEvent: {}
+[5.619158] (-) TimerEvent: {}
+[5.674506] (micro_ros_agent) StdoutLine: {'line': b"[ 25%] \x1b[34m\x1b[1mNo download step for 'uagent'\x1b[0m\n"}
+[5.719212] (-) TimerEvent: {}
+[5.734436] (micro_ros_agent) StdoutLine: {'line': b"[ 37%] \x1b[34m\x1b[1mNo update step for 'uagent'\x1b[0m\n"}
+[5.803428] (micro_ros_agent) StdoutLine: {'line': b"[ 50%] \x1b[34m\x1b[1mNo patch step for 'uagent'\x1b[0m\n"}
+[5.819360] (-) TimerEvent: {}
+[5.861277] (micro_ros_agent) StdoutLine: {'line': b"[ 62%] \x1b[34m\x1b[1mPerforming configure step for 'uagent'\x1b[0m\n"}
+[5.879886] (micro_ros_agent) StdoutLine: {'line': b'loading initial cache file /home/juampa/movil_s_f_ws/build/micro_ros_agent/agent/src/xrceagent-build/uagent-prefix/tmp/uagent-cache-.cmake\n'}
+[5.888736] (micro_ros_agent) StdoutLine: {'line': b"-- Setting build type to 'Release' as none was specified.\n"}
+[5.916508] (micro_ros_agent) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:153 (find_package):\n'}
+[5.917088] (micro_ros_agent) StderrLine: {'line': b'  Could not find a configuration file for package "fastcdr" that is\n'}
+[5.917539] (micro_ros_agent) StderrLine: {'line': b'  compatible with requested version "2".\n'}
+[5.917899] (micro_ros_agent) StderrLine: {'line': b'\n'}
+[5.918286] (micro_ros_agent) StderrLine: {'line': b'  The following configuration files were considered but not accepted:\n'}
+[5.918661] (micro_ros_agent) StderrLine: {'line': b'\n'}
+[5.919000] (micro_ros_agent) StderrLine: {'line': b'    /opt/ros/humble/lib/cmake/fastcdr/fastcdr-config.cmake, version: 1.0.29\n'}
+[5.919395] (-) TimerEvent: {}
+[5.919729] (micro_ros_agent) StderrLine: {'line': b'\n'}
+[5.920065] (micro_ros_agent) StderrLine: {'line': b'\n'}
+[5.920416] (micro_ros_agent) StderrLine: {'line': b'\x1b[0m\n'}
+[5.920839] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[5.921353] (micro_ros_agent) StdoutLine: {'line': b'See also "/home/juampa/movil_s_f_ws/build/micro_ros_agent/agent/src/xrceagent-build/CMakeFiles/CMakeOutput.log".\n'}
+[5.921801] (micro_ros_agent) StderrLine: {'line': b'gmake[5]: *** [CMakeFiles/uagent.dir/build.make:93: uagent-prefix/src/uagent-stamp/uagent-configure] Error 1\n'}
+[5.922190] (micro_ros_agent) StderrLine: {'line': b'gmake[4]: *** [CMakeFiles/Makefile2:83: CMakeFiles/uagent.dir/all] Error 2\n'}
+[5.922656] (micro_ros_agent) StderrLine: {'line': b'gmake[3]: *** [Makefile:91: all] Error 2\n'}
+[5.923142] (micro_ros_agent) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/xrceagent.dir/build.make:86: agent/src/xrceagent-stamp/xrceagent-build] Error 2\n'}
+[5.923636] (micro_ros_agent) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/xrceagent.dir/all] Error 2\n'}
+[5.924277] (micro_ros_agent) StderrLine: {'line': b'gmake: *** [Makefile:91: all] Error 2\n'}
+[5.929128] (micro_ros_agent) CommandEnded: {'returncode': 2}
+[5.955155] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 2}
+[5.965844] (-) EventReactorShutdown: {}

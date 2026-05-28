@@ -26,6 +26,7 @@ setup(
     entry_points={
         'console_scripts': [
         	'futbol_controller = robot_museum.futbol_controller:main',
+        	'sumo_gazebo_bridge = robot_museum.sumo_gazebo_bridge:main',
         ],
     },
 )

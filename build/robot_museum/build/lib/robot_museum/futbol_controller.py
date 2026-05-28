@@ -31,8 +31,8 @@ class FutbolController(Node):
         # Movimiento — solo si está habilitado
         twist = Twist()
         if self.enabled:
-            twist.linear.x  = msg.axes[1] * 1.0   # stick izq Y → adelante/atrás
-            twist.angular.z = msg.axes[0] * -0.9   # stick izq X → giro
+            twist.linear.x  = msg.axes[1] * -1.5    # stick izq Y → adelante/atrás
+            twist.angular.z = msg.axes[0] * 1.5    # stick izq X → giro
         self.cmd_pub.publish(twist)
 
         # Servo izquierdo — botón L1 (índice 6)

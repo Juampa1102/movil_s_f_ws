@@ -14,6 +14,7 @@ launch/teleop.launch.py
 resource/robot_museum
 robot_museum/__init__.py
 robot_museum/futbol_controller.py
+robot_museum/sumo_gazebo_bridge.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
