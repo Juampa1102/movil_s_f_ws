@@ -39,7 +39,7 @@
 #define FREQ_MOTOR 5000
 #define RES_MOTOR  8
 #define VEL_MAX    200
-#define VEL_BUSCAR 180
+#define VEL_BUSCAR 150
 #define VEL_ATACAR 200
 
 // ============================================================
@@ -131,62 +131,99 @@ void avanzar(int vel) {
 }
 
 // ============================================================
-// LEER SENSORES
+// FILTRO — mediana de 3 lecturas
+// ============================================================
+uint16_t mediana3(Adafruit_VL53L0X &lox) {
+    VL53L0X_RangingMeasurementData_t m;
+    uint16_t v[3];
+    for (int i = 0; i < 3; i++) {
+        lox.rangingTest(&m, false);
+        v[i] = (m.RangeStatus != 4) ? m.RangeMilliMeter : 9999;
+        delay(5);
+    }
+    // ordenar e[0..2] y devolver el del medio
+    if (v[0] > v[1]) { uint16_t t = v[0]; v[0] = v[1]; v[1] = t; }
+    if (v[1] > v[2]) { uint16_t t = v[1]; v[1] = v[2]; v[2] = t; }
+    if (v[0] > v[1]) { uint16_t t = v[0]; v[0] = v[1]; v[1] = t; }
+    return v[1];
+}
+
+// ============================================================
+// LEER SENSORES con filtro
 // ============================================================
 void leerSensores() {
-    VL53L0X_RangingMeasurementData_t measure;
-
-    TCA9548A(0);
-    lox0.rangingTest(&measure, false);
-    dist[0] = (measure.RangeStatus != 4) ? measure.RangeMilliMeter : 9999;
-
-    TCA9548A(1);
-    lox1.rangingTest(&measure, false);
-    dist[1] = (measure.RangeStatus != 4) ? measure.RangeMilliMeter : 9999;
-
-    TCA9548A(2);
-    lox2.rangingTest(&measure, false);
-    dist[2] = (measure.RangeStatus != 4) ? measure.RangeMilliMeter : 9999;
+    TCA9548A(0); dist[0] = mediana3(lox0);
+    TCA9548A(1); dist[1] = mediana3(lox1);
+    TCA9548A(2); dist[2] = mediana3(lox2);
 }
 
 // ============================================================
 // LÓGICA DE SUMO
 // ============================================================
+// ============================================================
+// HISTÉRESIS
+// ============================================================
+#define CONF_DETECTAR  2   // lecturas consecutivas para confirmar detección
+#define CONF_PERDER    4   // lecturas consecutivas para confirmar pérdida
+
+uint8_t cont_det  = 0;
+uint8_t cont_perd = 0;
+
 void ejecutarLogica() {
-    bool det0 = dist[0] < DIST_DETECCION;  // izquierdo
-    bool det1 = dist[1] < DIST_DETECCION;  // centro
-    bool det2 = dist[2] < DIST_DETECCION;  // derecho
+    bool det0 = dist[0] < DIST_DETECCION;
+    bool det1 = dist[1] < DIST_DETECCION;
+    bool det2 = dist[2] < DIST_DETECCION;
+    bool alguno = det0 || det1 || det2;
 
     switch (estado) {
 
         case BUSCAR:
             girarHorario(VEL_BUSCAR);
-            if (det1) {
-                estado = ATACAR;
-            } else if (det0 || det2) {
-                estado = CORREGIR;
+            cont_perd = 0;
+            if (alguno) {
+                cont_det++;
+                if (cont_det >= CONF_DETECTAR) {
+                    cont_det = 0;
+                    estado = det1 ? ATACAR : CORREGIR;
+                }
+            } else {
+                cont_det = 0;
             }
             break;
 
         case CORREGIR:
             if (det1) {
-                estado = ATACAR;
-            } else if (!det0 && !det1 && !det2) {
-                estado = BUSCAR;
-            } else if (det0 && !det2) {
-                // Oponente a la izquierda — girar antihorario
-                girarAntihorario(VEL_BUSCAR);
-            } else if (det2 && !det0) {
-                // Oponente a la derecha — girar horario
-                girarHorario(VEL_BUSCAR);
+                cont_det++;
+                if (cont_det >= CONF_DETECTAR) {
+                    cont_det = 0;
+                    estado = ATACAR;
+                }
+            } else if (!alguno) {
+                cont_perd++;
+                if (cont_perd >= CONF_PERDER) {
+                    cont_perd = 0;
+                    cont_det  = 0;
+                    estado = BUSCAR;
+                }
+            } else {
+                cont_det  = 0;
+                cont_perd = 0;
+                if (det0 && !det2) girarAntihorario(VEL_BUSCAR);
+                else if (det2 && !det0) girarHorario(VEL_BUSCAR);
             }
             break;
 
         case ATACAR:
             avanzar(VEL_ATACAR);
-            if (!det0 && !det1 && !det2) {
-                // Perdió al oponente
-                estado = BUSCAR;
+            if (!alguno) {
+                cont_perd++;
+                if (cont_perd >= CONF_PERDER) {
+                    cont_perd = 0;
+                    cont_det  = 0;
+                    estado = BUSCAR;
+                }
+            } else {
+                cont_perd = 0;
             }
             break;
     }
