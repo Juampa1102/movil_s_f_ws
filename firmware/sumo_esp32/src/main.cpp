@@ -39,13 +39,13 @@
 #define FREQ_MOTOR 5000
 #define RES_MOTOR  8
 #define VEL_MAX    200
-#define VEL_BUSCAR 120
+#define VEL_BUSCAR 180
 #define VEL_ATACAR 200
 
 // ============================================================
 // SENSORES VL53L0X
 // ============================================================
-#define DIST_DETECCION 400   // mm
+#define DIST_DETECCION 200   // mm
 #define TCA_ADDR       0x70
 
 Adafruit_VL53L0X lox0;
