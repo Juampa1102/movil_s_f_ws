@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Robótica Educativa Modular</title>
+  <meta name="description"
+    content="Explora la plataforma robótica educativa modular: ensamble, componentes y funcionamiento interactivo para visitantes del museo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  PANTALLA 0 – INICIO                                   -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="screen-home" class="screen active">
+    <div class="home-bg">
+      <div class="particles" id="particles"></div>
+      <div class="home-content">
+        <div class="home-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="36" stroke="url(#lg1)" stroke-width="3" />
+              <rect x="22" y="28" width="36" height="24" rx="4" fill="url(#lg2)" />
+              <circle cx="31" cy="38" r="4" fill="#00f5ff" />
+              <circle cx="49" cy="38" r="4" fill="#00f5ff" />
+              <rect x="34" y="44" width="12" height="3" rx="1.5" fill="#ffffff60" />
+              <rect x="28" y="24" width="6" height="6" rx="1" fill="#7c3aed" />
+              <rect x="46" y="24" width="6" height="6" rx="1" fill="#7c3aed" />
+              <rect x="18" y="32" width="5" height="10" rx="2" fill="#06b6d4" />
+              <rect x="57" y="32" width="5" height="10" rx="2" fill="#06b6d4" />
+              <defs>
+                <linearGradient id="lg1" x1="0" y1="0" x2="80" y2="80">
+                  <stop offset="0%" stop-color="#7c3aed" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+                <linearGradient id="lg2" x1="0" y1="0" x2="36" y2="24">
+                  <stop offset="0%" stop-color="#1e1b4b" />
+                  <stop offset="100%" stop-color="#312e81" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <h1>Plataforma Robótica</h1>
+            <p>Educativa Modular</p>
+          </div>
+        </div>
+
+        <p class="home-subtitle">Descubre cómo funciona un robot de competencia desde adentro</p>
+
+        <button id="btn-start" class="btn-primary btn-giant pulse-anim" onclick="startExperience()">
+          <span class="btn-icon">▶</span>
+          Iniciar
+        </button>
+
+        <div class="home-hint">Toca el botón para comenzar la experiencia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  PANTALLA 1 – VIDEO PRINCIPAL                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="screen-video" class="screen">
+    <div class="video-fullscreen">
+      <video id="main-video" playsinline>
+        <source src="Videos/video_principal.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay" id="video-overlay">
+        <div class="video-skip">
+          <button class="btn-skip" onclick="skipVideo()">Saltar ›</button>
+        </div>
+      </div>
+      <!-- Pantalla post-video -->
+      <div class="post-video" id="post-video" style="display:none;">
+        <div class="post-video-content">
+          <h2 class="post-title">¿Qué deseas explorar?</h2>
+          <div class="main-choices">
+            <button class="choice-btn choice-ensamble" onclick="goTo('screen-ensamble')">
+              <div class="choice-icon">🔧</div>
+              <div class="choice-label">Ensamble</div>
+              <div class="choice-desc">Conoce las piezas y el proceso de armado</div>
+            </button>
+            <button class="choice-btn choice-info" onclick="goTo('screen-info')">
+              <div class="choice-icon">⚡</div>
+              <div class="choice-label">Información</div>
+              <div class="choice-desc">Explora los componentes electrónicos</div>
+            </button>
+          </div>
+          <button class="btn-back-home" onclick="goHome()">← Volver al inicio</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  PANTALLA 2 – ENSAMBLE                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="screen-ensamble" class="screen">
+    <div class="screen-header">
+      <button class="btn-nav-back" onclick="goBack('screen-ensamble')">← Atrás</button>
+      <h2 class="screen-title">🔧 Ensamble del Robot</h2>
+      <button class="btn-nav-home" onclick="goHome()">🏠 Inicio</button>
+    </div>
+
+    <!-- Videos superiores -->
+    <div class="ensamble-videos">
+      <div class="video-card" id="card-sumo">
+        <div class="video-label">Robot Sumo</div>
+        <video id="video-sumo" loop muted playsinline>
+          <source src="Videos/ensamble_sumo.mp4" type="video/mp4" />
+        </video>
+        <div class="video-controls">
+          <button class="ctrl-btn" onclick="togglePlay('video-sumo', this)" title="Play/Pause">
+            <span class="ctrl-icon play-icon">⏸</span>
+          </button>
+          <button class="ctrl-btn" onclick="toggleMute('video-sumo', this)" title="Silenciar">
+            <span class="ctrl-icon mute-icon">🔊</span>
+          </button>
+          <button class="ctrl-btn" onclick="restartVideo('video-sumo')" title="Reiniciar">
+            <span class="ctrl-icon">↺</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="video-card" id="card-futbol">
+        <div class="video-label">Robot Fútbol</div>
+        <video id="video-futbol" loop muted playsinline>
+          <source src="Videos/ensamble_futbol.mp4" type="video/mp4" />
+        </video>
+        <div class="video-controls">
+          <button class="ctrl-btn" onclick="togglePlay('video-futbol', this)" title="Play/Pause">
+            <span class="ctrl-icon play-icon">⏸</span>
+          </button>
+          <button class="ctrl-btn" onclick="toggleMute('video-futbol', this)" title="Silenciar">
+            <span class="ctrl-icon mute-icon">🔊</span>
+          </button>
+          <button class="ctrl-btn" onclick="restartVideo('video-futbol')" title="Reiniciar">
+            <span class="ctrl-icon">↺</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galería de piezas -->
+    <div class="gallery-section">
+      <h3 class="gallery-title">Piezas del Robot</h3>
+      <div class="pieces-gallery" id="pieces-gallery"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  PANTALLA 3 – INFORMACIÓN                              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="screen-info" class="screen">
+    <div class="screen-header">
+      <button class="btn-nav-back" onclick="goBack('screen-info')">← Atrás</button>
+      <h2 class="screen-title"> Componentes Electrónicos</h2>
+      <button class="btn-nav-home" onclick="goHome()">🏠 Inicio</button>
+    </div>
+
+    <div class="info-layout">
+      <!-- Sidebar de navegación -->
+      <div class="info-sidebar" id="info-sidebar"></div>
+      <!-- Panel de detalle -->
+      <div class="info-detail" id="info-detail">
+        <div class="detail-placeholder">
+          <div class="placeholder-icon">👆</div>
+          <p>Selecciona un componente para ver su información</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  MODAL – Imagen ampliada                               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="img-modal" class="img-modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img id="modal-img" src="" alt="" />
+      <div id="modal-caption" class="modal-caption"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
