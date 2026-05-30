@@ -121,7 +121,7 @@
     <origin xyz="0.0036812 0.0465 0.013458" rpy="1.5708 0 3.1416"/>
     <parent link="base_link"/>
     <child link="ruedaizq_Link"/>
-    <axis xyz="0 0 -1"/>
+    <axis xyz="0 0 1"/>
     <limit effort="50" velocity="50"/>
     <dynamics damping="0.1" friction="0.1"/>
   </joint>
@@ -250,8 +250,8 @@
         <remapping>cmd_vel:=cmd_vel_real</remapping>
         <remapping>odom:=odom</remapping>
       </ros>
-      <left_joint>ruedader_joint</left_joint>
-      <right_joint>ruedaizq_joint</right_joint>
+      <left_joint>ruedaizq_joint</left_joint>
+      <right_joint>ruedader_joint</right_joint>
       <wheel_separation>0.0930</wheel_separation>
       <wheel_diameter>0.042</wheel_diameter>
       <max_wheel_torque>50</max_wheel_torque>
@@ -287,6 +287,8 @@
        ============================================================ -->
   <gazebo reference="base_link">
     <material>Gazebo/White</material>
+    <mu1>0.05</mu1>
+    <mu2>0.05</mu2>
   </gazebo>
   <gazebo reference="ruedaizq_Link">
     <material>Gazebo/Black</material>

@@ -111,7 +111,7 @@
     <origin xyz="-0.0465 0.0036812 0.013458" rpy="1.5708 0 -1.5708"/>
     <parent link="base_link"/>
     <child link="ruedaizq_Link"/>
-    <axis xyz="0 0 -1"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
   <!-- SERVO DERECHO -->
@@ -211,6 +211,8 @@
   <!-- MATERIALES GAZEBO -->
   <gazebo reference="base_link">
     <material>Gazebo/White</material>
+    <mu1>0.05</mu1>
+    <mu2>0.05</mu2>
   </gazebo>
   <gazebo reference="ruedader_Link">
     <material>Gazebo/Black</material>
